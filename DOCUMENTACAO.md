@@ -36,24 +36,16 @@ O **Dr. AfyaPay Assistente** resolve esse problema atuando como um monitor intel
 
 O assistente foi desenhado seguindo o padrão moderno de **Function Calling (Tools)** síncronas com modelos de linguagem de grande escala (LLM).
 
-### Fluxo de Funcionamento (Mermaid)
+### Fluxo de Funcionamento (Simplificado)
 
 ```mermaid
-sequenceDiagram
-    autonumber
-    actor Usuario as Usuário (Interface)
-    participant APP as Frontend (Streamlit)
-    participant LLM as IA (Gemini 2.5 Flash)
-    participant PY as Engine Python (calcular_juros)
-
-    Usuario->>APP: Envia pergunta ("Simular 5000 a 10% a.a. por 5 anos")
-    APP->>LLM: Envia histórico + prompt do usuário
-    Note over LLM: O modelo analisa a intenção e<br/>identifica a necessidade de cálculo exato.
-    LLM->>PY: Solicita chamada de ferramenta: calcular_juros_compostos(capital_inicial=5000, ...)
-    Note over PY: Executa a fórmula matemática exata em Python
-    PY-->>LLM: Retorna dados estruturados do cálculo
-    LLM-->>APP: Gera resposta final explicativa e formatada em Markdown
-    APP-->>Usuario: Exibe resposta no chat com UX estilizada
+graph TD
+    A[Usuário faz uma pergunta ou simulação] --> B{A IA precisa fazer cálculos?}
+    B -- Sim --> C[Executa a função matemática em Python]
+    B -- Não --> D[Consulta a base de FAQs e regras do assistente]
+    C --> E[IA monta a resposta formatada com os resultados]
+    D --> E
+    E --> F[Mostra a resposta final na tela do chat]
 ```
 
 ### Componentes Técnicos
