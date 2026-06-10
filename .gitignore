@@ -1,0 +1,20 @@
+# Ambientes Virtuais
+venv/
+ENV/
+env/
+.venv/
+
+# Variáveis de Ambiente e Chaves (Segurança!)
+.env
+
+# Python (Cache e compilados)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Configurações do Streamlit
+.streamlit/
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
