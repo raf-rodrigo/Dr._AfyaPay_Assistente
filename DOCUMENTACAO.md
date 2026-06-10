@@ -70,3 +70,15 @@ Para garantir a confiabilidade da ferramenta financeira corporativa, o Dr. AfyaP
 - **Escopo Fechado:** O agente recusará educadamente responder a perguntas de cunho pessoal, piadas fora de contexto, escrita de código não relacionada a finanças, ou outros temas fora do controle orçamentário.
 - **Segurança de Credenciais:** Nenhuma chave de API (como o token do Gemini) é exposta no código-fonte. O uso do arquivo `.env` e sua exclusão via `.gitignore` são obrigatórios para evitar vazamento de credenciais em repositórios públicos do GitHub.
 - **Validação de Entrada:** A função Python de cálculo trata entradas nulas, negativas ou strings inválidas para evitar interrupções no funcionamento do servidor (quebra do app).
+
+---
+
+## 📊 5. Base de Conhecimento (Dados Mocados)
+
+Para validar o assistente em um cenário de testes realista, foram integrados dados fictícios (mockados) que simulam o banco de dados do cliente e da instituição financeira. Esses arquivos estão localizados no diretório [data/](file:///home/rafael-rodrigo/Documentos/curso/dr-afyapay-assistente/data):
+
+1. **`produtos_financeiros.json`:** Catálogo oficial de investimentos da instituição. Contém informações estruturadas de risco, rentabilidade, categoria, aporte mínimo e público-alvo para produtos como *Tesouro Selic*, *CDB Liquidez Diária*, *LCI/LCA*, *Fundo Multimercado* e *Fundo de Ações*.
+2. **`perfil_investidor.json`:** Cadastro simulado do cliente (João Silva, 32 anos), contendo dados de renda mensal, patrimônio, reserva de emergência atual e suas metas financeiras específicas (ex: completar a reserva de emergência e dar entrada em um apartamento).
+3. **`transacoes.csv`:** Histórico recente de receitas e despesas do usuário (salário, aluguel, supermercado, assinaturas, transporte), permitindo ao assistente analisar o fluxo de caixa para emitir os **Alertas de Custos**.
+4. **`historico_atendimento.csv`:** Registro de atendimentos passados do cliente nos canais de suporte (chat, telefone, e-mail), detalhando o tema (CDB, metas, cadastro) e se a demanda foi solucionada.
+
