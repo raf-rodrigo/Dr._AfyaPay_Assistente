@@ -81,4 +81,6 @@ Para validar o assistente em um cenário de testes realista, foram integrados da
 2. **`perfil_investidor.json`:** Cadastro simulado do cliente (João Silva, 32 anos), contendo dados de renda mensal, patrimônio, reserva de emergência atual e suas metas financeiras específicas (ex: completar a reserva de emergência e dar entrada em um apartamento).
 3. **`transacoes.csv`:** Histórico recente de receitas e despesas do usuário (salário, aluguel, supermercado, assinaturas, transporte), permitindo ao assistente analisar o fluxo de caixa para emitir os **Alertas de Custos**.
 4. **`historico_atendimento.csv`:** Registro de atendimentos passados do cliente nos canais de suporte (chat, telefone, e-mail), detalhando o tema (CDB, metas, cadastro) e se a demanda foi solucionada.
+5. **`regulatorio_financeiro.json`:** Definições e regras oficiais de mercado obtidas de órgãos reguladores do Brasil (Banco Central, Tesouro Nacional e B3). Contém os limites exatos de cobertura do FGC (R$ 250 mil), regras de rentabilidade da Poupança indexadas à Selic, e o conceito de CDI.
+
 
