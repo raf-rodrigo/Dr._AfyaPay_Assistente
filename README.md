@@ -76,7 +76,7 @@ GEMINI_API_KEY=sua_chave_de_api_aqui
 
 ### 5. Executar a Aplicação
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 ```
 Acesse a aplicação abrindo o link no navegador: **`http://localhost:8501`**
 
@@ -89,3 +89,12 @@ Este projeto consolida o aprendizado prático em:
 3. **Engenharia de Prompts & UX:** Definição de personas de atendimento automatizado eficazes.
 
 Desenvolvido por **[Seu Nome/GitHub]** como projeto prático para a conclusão do Bootcamp Afya.
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por **Rafael Rodrigo** como projeto prático para conclusão do **Bootcamp Afya – Automação de Dados com IA** na plataforma DIO.
+
+GitHub: https://github.com/raf-rodrigo
+LinkedIn: https://www.linkedin.com/in/rafael-rodrigo-doimo
